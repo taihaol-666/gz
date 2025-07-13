@@ -25,6 +25,7 @@ ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Pr
 ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Providers/Ruleset/Twitter.yaml
 ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Twitter.list
 ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Docker.list
+ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Instagram.list
 
 ruleset=游戏平台,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list
 ruleset=游戏平台,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list
