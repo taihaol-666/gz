@@ -43,7 +43,7 @@ custom_proxy_group=国外`select`[]香港节点`[]节点2`[]节点3`[]DIRECT
 custom_proxy_group=游戏平台`select`[]香港节点`[]节点2`[]节点3`[]DIRECT
 custom_proxy_group=电报`select`[]香港节点`[]节点2`[]节点3`[]DIRECT
 custom_proxy_group=gpt`select`[]香港节点`[]节点2`[]节点3`[]DIRECT
-custom_proxy_group=未匹配`select`[]香港节点`[]节点2`[]节点3`[]DIRECT
+custom_proxy_group=未匹配`select`[]香港节点`[]节点2`[]节点3`[]DIRECT`.*
 
 
 enable_rule_generator=true
