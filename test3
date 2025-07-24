@@ -1,19 +1,29 @@
 [custom]
 ;设置匹配规则
+
+ruleset=直连,[]GEOIP,CN
+# 国内ip分流
+
 ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+# 本地地址和域名，局域网如192.168.19.1.0/24如10.0.0.0/8如各种路由器本地域名
+
 ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+# 白名单，防止被当成广告，如小米，谷歌，微软的推送服务
+
 ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list
 ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCN.list
-ruleset=直连,[]GEOIP,CN
-ruleset=直连,[]DOMAIN-SUFFIX,xn--ngstr-lra8j.com
-ruleset=直连,[]DOMAIN-SUFFIX,services.googleapis.cn
+# ruleset=直连,[]DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+# ruleset=直连,[]DOMAIN-SUFFIX,services.googleapis.cn
+# 谷歌直连
 
 ruleset=电报,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+# 电报尝试选择低成本节点
 
-ruleset=节点3,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/TikTok.list
+ruleset=手动1,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/TikTok.list
+# 主力节点香港用不了切换为手动选择
 
-ruleset=国外,[]DOMAIN-SUFFIX,x.com
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
+# 谷歌国外推送
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.list
@@ -21,16 +31,12 @@ ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/On
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
 ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Github.list
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+# 内容：国外媒体列表
 ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Providers/Ruleset/Twitter.yaml
 ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Twitter.list
 ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Docker.list
 ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Instagram.list
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list
-ruleset=国外,[]DOMAIN-SUFFIX,themoviedb.org
-ruleset=国外,[]DOMAIN-SUFFIX,imdb.com
-ruleset=国外,[]DOMAIN-SUFFIX,tmdb.org
-
-
 
 ruleset=游戏平台,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list
 ruleset=游戏平台,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list
@@ -39,20 +45,20 @@ ruleset=游戏平台,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Cl
 ruleset=游戏平台,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list
 
 
-
-ruleset=未匹配,[]FINAL
+FINAL,未匹配  
+# 所有未匹配的流量，使用"未匹配"策略组
+# ruleset=未匹配,[]FINAL
 
 
 ;设置分组标志位
 custom_proxy_group=直连`select`[]DIRECT`[]香港节点
+custom_proxy_group=手动1`select`.*
+custom_proxy_group=手动2`select`.*
 custom_proxy_group=香港节点`url-test`(港|HK|hk|Hong Kong|HongKong|hongkong)`http://www.gstatic.com/generate_204`300,,50
-custom_proxy_group=节点2`select`.*
-custom_proxy_group=节点3`select`.*
-custom_proxy_group=国外`select`[]香港节点`[]节点2`[]节点3`[]DIRECT
-custom_proxy_group=游戏平台`select`[]香港节点`[]节点2`[]节点3`[]DIRECT
-custom_proxy_group=电报`select`[]香港节点`[]节点2`[]节点3`[]DIRECT
-custom_proxy_group=gpt`select`[]香港节点`[]节点2`[]节点3`[]DIRECT
-custom_proxy_group=未匹配`select`[]香港节点`[]节点2`[]节点3`[]DIRECT`.*
+custom_proxy_group=国外`selec`[]香港节点`[]手动1`[]手动2`[]DIRECT`.*
+custom_proxy_group=游戏平台`select`[]香港节点`[]手动1`[]手动2`[]DIRECT`.*
+custom_proxy_group=电报`select`[]香港节点`[]手动1`[]手动2`[]DIRECT`.*
+custom_proxy_group=未匹配`select`[]DIRECT`[]香港节点`[]手动1`[]手动2`.*
 
 
 enable_rule_generator=true
