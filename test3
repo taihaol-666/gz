@@ -45,9 +45,8 @@ ruleset=游戏平台,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Cl
 ruleset=游戏平台,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list
 
 
-FINAL,未匹配  
+ruleset=未匹配,[]FINAL
 # 所有未匹配的流量，使用"未匹配"策略组
-# ruleset=未匹配,[]FINAL
 
 
 ;设置分组标志位
