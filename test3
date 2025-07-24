@@ -10,6 +10,8 @@ ruleset=直连,[]DOMAIN-SUFFIX,services.googleapis.cn
 
 ruleset=电报,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
 
+ruleset=节点3,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/TikTok.list
+
 ruleset=国外,[]DOMAIN-SUFFIX,x.com
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
@@ -36,7 +38,6 @@ ruleset=游戏平台,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Cl
 ruleset=游戏平台,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list
 ruleset=游戏平台,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list
 
-ruleset=节点3,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/TikTok.list
 
 
 ruleset=未匹配,[]FINAL
