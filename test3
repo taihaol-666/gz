@@ -16,7 +16,7 @@ ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ru
 ruleset=电报,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
 # 电报尝试选择低成本节点
 
-ruleset=手动1,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/TikTok.list
+ruleset=电报,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/TikTok.list
 # 主力节点香港用不了切换为手动选择
 
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
