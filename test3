@@ -9,10 +9,10 @@ ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Un
 # 白名单，防止被当成广告，如小米，谷歌，微软的推送服务
 ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list
 ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCN.list
-# ruleset=直连,[]DOMAIN-SUFFIX,xn--ngstr-lra8j.com
-# ruleset=直连,[]DOMAIN-SUFFIX,services.googleapis.cn
+ruleset=直连,[]DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+ruleset=直连,[]DOMAIN-SUFFIX,services.googleapis.cn
 # 谷歌直连
-ruleset=直连,https://raw.githubusercontent.com/Mirr0ch1/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+# ruleset=直连,https://raw.githubusercontent.com/Mirr0ch1/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
 # steam直连
 
 ruleset=电报,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
