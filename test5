@@ -1,9 +1,23 @@
 [custom]
 
 
+ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Github.list
+# github
+
+
 
 ruleset=未匹配,[]FINAL
 # 所有未匹配的流量，使用"未匹配"策略组
 
 
+
+
+
+
+
+
+
+
+
+custom_proxy_group=国外`select`[]DIRECT`.*
 custom_proxy_group=未匹配`select`[]DIRECT
