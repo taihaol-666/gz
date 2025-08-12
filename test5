@@ -1,4 +1,15 @@
 [custom]
+ruleset=直连,[]GEOIP,CN
+# 国内ip分流
+ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+# 本地地址和域名，局域网如192.168.19.1.0/24如10.0.0.0/8如各种路由器本地域名
+ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+# 白名单，防止被当成广告，如小米，谷歌，微软的推送服务
+ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list
+ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCN.list
+ruleset=直连,[]DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+ruleset=直连,[]DOMAIN-SUFFIX,services.googleapis.cn
+# 谷歌直连
 
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
 # 谷歌推送
@@ -14,6 +25,15 @@ ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Mi
 # 微软公司
 ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Github.list
 # github
+ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+# 内容：国外媒体列表
+ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Providers/Ruleset/Twitter.yaml
+ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Twitter.list
+# 推特
+ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Docker.list
+# docker
+ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Instagram.list
+# ins
 
 
 
@@ -23,7 +43,7 @@ ruleset=未匹配,[]FINAL
 
 
 
-
+custom_proxy_group=直连`select`[]DIRECT`.*
 custom_proxy_group=国外`select`[]DIRECT`.*
 custom_proxy_group=未匹配`select`[]DIRECT
 
