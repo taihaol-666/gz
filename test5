@@ -13,11 +13,9 @@ ruleset=未匹配,[]FINAL
 
 
 
-
-
-
-
-
-
 custom_proxy_group=国外`select`[]DIRECT`.*
 custom_proxy_group=未匹配`select`[]DIRECT
+
+
+enable_rule_generator=true
+overwrite_original_rules=true
