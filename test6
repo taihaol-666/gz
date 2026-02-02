@@ -1,11 +1,44 @@
 [custom]
 ;设置匹配规则
+
+# 1. 最精准：谷歌中国区专属域名直连（优先匹配，避免被通用规则覆盖）
+ruleset=直连,[]DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+ruleset=直连,[]DOMAIN-SUFFIX,services.googleapis.cn
+# 2. 次精准：谷歌中国区 IP/域名规则库（补充专属域名外的谷歌中国服务）
+ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list
+ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCN.list
+# 3. 通用白名单：推送/基础服务（保障小米/谷歌/微软推送不被拦截）
+ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+# 4. 局域网：内网设备优先直连（避免内网请求走代理）
+ruleset=直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+# 5. 兜底：所有中国 IP 直连（最后匹配，覆盖未命中上面规则的国内 IP）
+ruleset=直连,[]GEOIP,CN
+
+ruleset=电报,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+# 电报尝试选择低成本节点
+
+ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Providers/Ruleset/Twitter.yaml
+ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Twitter.list
+# 推特
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
 # 谷歌推送
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
 # 油管
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list
 # 谷歌公司
+ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.list
+# 微软bing
+ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list
+# 微软云盘
+ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+# 微软公司
+ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Instagram.list
+# ins
+ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Docker.list
+# docker
+ruleset=国外,[]DOMAIN-SUFFIX,wikipedia.org
+#维基百科
+ruleset=国外,[]DOMAIN-KEYWORD,docker
 ruleset=国外,https://raw.githubusercontent.com/taihaol-666/clash/refs/heads/main/github.list
 # github
 
