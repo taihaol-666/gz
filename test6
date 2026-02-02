@@ -1,0 +1,12 @@
+[custom]
+;设置匹配规则
+ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
+# 谷歌推送
+ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+# 油管
+ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list
+# 谷歌公司
+
+
+
+custom_proxy_group=国外`select`.*
