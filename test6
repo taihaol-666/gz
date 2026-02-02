@@ -6,7 +6,8 @@ ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ru
 # 油管
 ruleset=国外,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list
 # 谷歌公司
-
+ruleset=国外,https://raw.githubusercontent.com/Special-Care/ACL4SSR/refs/heads/main/Clash/Ruleset/Github.list
+# github
 
 
 custom_proxy_group=国外`select`.*
